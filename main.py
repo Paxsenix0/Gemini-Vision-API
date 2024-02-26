@@ -1,7 +1,7 @@
 from flask import Flask, request
 import requests
 from urllib.parse import quote_plus
-from config import API_TOKEN, VISION_TEMPERATURE, PRO_TEMPERATURE
+from config import API_TOKEN, VISION_TEMPERATURE
 import re
 import base64
 import os
