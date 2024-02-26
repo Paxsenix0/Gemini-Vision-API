@@ -33,8 +33,9 @@ def get_pro_llm_response(img,prompt):
                         "data": base64_img
                     }
                 },
-                {"text":prompt},
-
+                {
+                  "text":prompt
+                },
             ]
         }
     ],
@@ -70,4 +71,4 @@ def get_pro_llm_response(img,prompt):
     print(response.json())
     return response.json()['candidates'][0]['content']['parts'][0]['text'];
 
-app.run(host='0.0.0.0', port=8080)
+# app.run(host='0.0.0.0', port=8080)
