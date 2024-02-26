@@ -16,7 +16,7 @@ https://localhost:3000/gemini/vision?url=https://hips.hearstapps.com/hmg-prod/im
 ### Deployment
 __Vercel__
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPaxsenix0%2FSpotify-Canvas-API%2Ftree%2Fmain&project-name=Spotify-Canvas-API&repository-name=Spotify-Canvas-API&redirect-url=https%3A%2F%2Fgithub.com%2FPaxsenix0%2FSpotify-Canvas-API)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPaxsenix0%2FGemini-Vision-API%2Ftree%2Fmain&project-name=Gemini-Vision-API&repository-name=Gemini-Vision-API&redirect-url=https%3A%2F%2Fgithub.com%2FPaxsenix0%2FGemini-Vision-API)
 
 
 ### Information
