@@ -22,5 +22,5 @@ __Vercel__
 ### Information
 i'm sorry if the code is too weird, because i'm only using Phone (i don't have PC/Laptop) and i'm still beginner:)
 
-### Reference
-i'm doing searching about spotify canvas API but i cant find it, so i made it from help this repo: https://github.com/bartleyg/my-spotify-canvas
+### Contact
+[Telegram](https://t.me/thatmyusername)
