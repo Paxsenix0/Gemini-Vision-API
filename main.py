@@ -66,7 +66,7 @@ def get_pro_llm_response(img,prompt):
         ]
     }
     headers = {"Content-Type":"application/json"}
-    url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent?key=' + API_TOKEN
+    url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' + API_TOKEN
     response = requests.post(url, json=data, headers=headers)
     print(response.json())
     return response.json()['candidates'][0]['content']['parts'][0]['text'];
