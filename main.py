@@ -17,7 +17,8 @@ def vision():
  url = request.args.get('url') 
  prompt = request.args.get('prompt')
  response = requests.get(url)
- return { "answer": get_pro_llm_response(response.content, prompt) }
+ content = get_pro_llm_response(response.content, prompt)
+ return { "answer": content }
 
 def get_pro_llm_response(img,prompt):
 
@@ -34,7 +35,7 @@ def get_pro_llm_response(img,prompt):
                     }
                 },
                 {
-                  "text":prompt
+                  "text": prompt
                 },
             ]
         }
@@ -49,23 +50,25 @@ def get_pro_llm_response(img,prompt):
     "safetySettings": [
         {
             "category": "HARM_CATEGORY_HARASSMENT",
-            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+            "threshold": "BLOCK_NONE"
         },
         {
             "category": "HARM_CATEGORY_HATE_SPEECH",
-            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+            "threshold": "BLOCK_NONE"
         },
         {
             "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+            "threshold": "BLOCK_NONE"
         },
         {
             "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+            "threshold": "BLOCK_NONE"
         }
-        ]
+    ]
     }
-    headers = {"Content-Type":"application/json"}
+    headers = {
+        "Content-Type":"application/json"
+    }
     url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' + API_TOKEN
     response = requests.post(url, json=data, headers=headers)
     print(response.json())
